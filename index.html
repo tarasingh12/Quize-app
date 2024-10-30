@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <!-- Home Page -->
+        <div id="home-page">
+            <div class="user-details">
+                <img src="/img/quize app logo.png" alt="Testbook">
+                <h1>Hello user!</h1>
+                <h3>Enter your name to continue the Quiz.</h3>
+                <input type="text" id="username" placeholder="Enter your name">
+                <button>Enter</button>
+                <p>You'll have 10 seconds to answer each questions</p>
+            </div>
+            <hr>
+            <!-- choose category section -->
+            <div class="category-section">
+                <h1>Select Category</h1>
+                <div class="categories">
+                    <button>Pipes and Cistens</button>
+                    <button>Probobility</button>
+                    <button>Problem on Age</button>
+                    <button>Profit and Loss</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- quiz page -->
+        <div id="quiz-page" class='hidden '>
+            <div class="header">
+                <!-- category title -->
+                <div >
+                    <h3 id="category-title">html</h3>
+                </div>
+                <!-- timer and score  -->
+                <div class="time-score">
+                    <span id="timer"></span>
+                    <span id="score">SCORE:
+                        <span id="score-count">0</span> </span>
+                </div>
+            </div>
+            <!-- question details -->
+            <div id="content">
+               <h3 id="question-number"></h3>
+               <p id="question"></p>
+            </div>
+               <div id="options">
+                <button class="option-btn">Pipes and Cistens</button>
+                            <button class="option-btn">Probobility</button>
+                            <button class="option-btn">Problem on Age</button>
+                            <button class="option-btn">Profit and Loss</button>
+               </div>
+               <button class="btn">Next Question</button>
+        </div>
+
+        <!-- result page -->
+         <div id="result-page" class='hidden'>
+            <h1>Quiz Result</h1>
+        <p class="total-score"><span class="uname"></span> your result is:<span id="total-score"></span></p>
+        <p class="taken-time">Total Time Taken:<span id="tatal-time"></span> seconds</p>
+        <p class="total-questions">Total Questions:<span id="total-questions"></span></p>
+        <p class="Attempt">Attempt:<span id="Attempt"></span></p>
+        <p class="correct">Correct:<span id="correct"></span></p>
+        <p class="wrong">Wrong:<span id="wrong"></span></p>
+        <p class="percentage">Percentage:<span id="percentage"></span></p>
+        <div class='nav-btn'>
+            <button id ='start-again-btn' class="btn" onclick="startQuiz()">Start Again</button>
+            <button id="go-home-btn" class="btn">Go To Home</button>
+
+        </div>
+       
+         </div>
+    </div>
+<!-- questions script file -->
+    <script src="/question.js"></script>
+
+    <!-- main script file -->
+    <script src="/script.js"></script>
+   
+</body>
+
+</html>
